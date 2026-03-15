@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<title>Happy Birthday, My Love</title>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Raleway:wght@200;300;400&display=swap"
@@ -1173,6 +1173,104 @@
 				opacity: 1;
 				transform: translateY(0);
 			}
+		/* ══════════════════════════════
+		   MOBILE RESPONSIVE
+		══════════════════════════════ */
+		@media (max-width: 480px) {
+
+			/* ── COVER ── */
+			.cover-title {
+				font-size: clamp(2rem, 10vw, 3rem) !important;
+				line-height: 1.2;
+			}
+			.cover-sub { font-size: 0.75rem; }
+			.cover-tag { font-size: 0.6rem; letter-spacing: 0.2em; }
+			#envelope-wrap { transform: scale(0.85); }
+
+			/* ── HERO ── */
+			.hero-eyebrow { font-size: 0.55rem; letter-spacing: 0.25em; }
+			.hero-name { font-size: clamp(2.8rem, 14vw, 5rem) !important; }
+			.hero-tagline { font-size: 0.8rem; padding: 0 1rem; }
+			.hero-date { font-size: 0.6rem; }
+			.hero-ring { display: none; }
+
+			/* ── MESSAGES ── */
+			#messages {
+				padding: 4rem 1rem !important;
+			}
+			.message-card {
+				padding: 1.8rem 1.2rem !important;
+				margin-bottom: 1.2rem;
+			}
+			/* disable left/right slide on mobile — use fade only */
+			.message-card:nth-child(odd) { transform: translateY(20px) !important; }
+			.message-card:nth-child(even) {
+				transform: translateY(20px) !important;
+				text-align: left !important;
+			}
+			.message-card.visible {
+				transform: translateY(0) !important;
+			}
+			.card-title { font-size: clamp(1.3rem, 6vw, 1.8rem) !important; }
+			.card-body { font-size: 0.85rem; line-height: 1.7; }
+
+			/* ── WISHES ── */
+			#wishes { padding: 3rem 1.2rem !important; }
+			.wishes-title { font-size: clamp(1.4rem, 6vw, 2rem) !important; margin-bottom: 2rem; }
+			.wish-text { font-size: clamp(1.1rem, 4.5vw, 1.4rem) !important; }
+			.wish-item { padding: 1.5rem 1rem; }
+
+			/* ── HEART TAP ── */
+			#big-heart-wrap { width: 150px !important; height: 150px !important; }
+			#big-heart-svg { width: 150px !important; height: 150px !important; }
+			.heart-tap-label { font-size: 1rem; }
+
+			/* ── CAT IMAGE ── */
+			.cat-img-wrap {
+				width: min(240px, 72vw) !important;
+				height: min(240px, 72vw) !important;
+			}
+
+			/* ── CHIBI / DIVIDER ── */
+			.visual-divider { padding: 1rem 0 2rem; }
+			.hearts-row { gap: 1rem; }
+
+			/* ── FINALE ── */
+			#finale { padding: 3rem 1.5rem; }
+			.finale-name { font-size: clamp(1.5rem, 7vw, 2.5rem) !important; }
+			.heart-burst { font-size: 2.5rem !important; }
+
+			/* ── MUSIC BTN ── */
+			#music-btn {
+				bottom: 1rem !important;
+				right: 1rem !important;
+				width: 36px !important;
+				height: 36px !important;
+				font-size: 1rem !important;
+			}
+
+			/* ── SCROLL HINT ── */
+			.scroll-hint { bottom: 1.5rem; }
+		}
+
+		/* tablet */
+		@media (max-width: 768px) and (min-width: 481px) {
+			.hero-name { font-size: clamp(3rem, 12vw, 5rem) !important; }
+			.message-card { padding: 2rem 1.8rem !important; }
+			#messages { padding: 4rem 1.5rem !important; }
+			.cat-img-wrap {
+				width: min(280px, 75vw) !important;
+				height: min(280px, 75vw) !important;
+			}
+		}
+
+		/* touch — bigger tap targets */
+		@media (hover: none) and (pointer: coarse) {
+			#big-heart-wrap { cursor: default; }
+			.wish-item:hover { background: none; }
+			#envelope-wrap { -webkit-tap-highlight-color: transparent; }
+		}
+
 		</style>
 	</head>
 	<body>
@@ -1296,7 +1394,7 @@
 						meminta, ajari aku pelan-pelan menjadi versi diriku yang pantas
 						berjalan disampingmu. Jika langkahku kadang keliru, tetaplah tinggal
 						dan genggam tanganku, agar kita tumbuh bersama tanpa saling
-						meninggalkan. Karena bagiku, mencintaimu bukan soal memiliki
+						meinggalkan. Karena bagiku, mencintaimu bukan soal memiliki
 						segalanya, melainkan tentang bertahan dan bertumbuh bersamamu, tanpa
 						ingin dilepas oleh waktu
 					</p>
